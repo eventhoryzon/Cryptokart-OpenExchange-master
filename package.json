@@ -1,0 +1,26 @@
+{
+  "name": "CryptoKart-OpenExchange-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bitcore-lib": "^0.15.0",
+    "bitcore-mnemonic": "^1.5.0",
+    "body-parser": "^1.18.3",
+    "couchbase": "^2.4.6",
+    "express": "^4.16.3",
+    "joi": "^13.3.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
