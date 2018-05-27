@@ -1,8 +1,8 @@
 
 {
     "mnemonic": "manage inspire agent october potato thought hospital trim shoulder round tired kangaroo",
-    "host": "Cryptokart",
-    "bucket": "Admin",
+    "host": "localhost",
+    "bucket": "cryptokartbucket",
     "username": "Admin",
     "password": "cryptokart"
 }

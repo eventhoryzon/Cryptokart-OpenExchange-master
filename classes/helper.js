@@ -99,6 +99,7 @@ addAddress(account) {
             if(error) {
                 reject({ "code": error.code, "message": error.message });
             }
+           
             var keypair = this.createKeyPair(result.value.account);
             this.bucket.mutateIn(account).arrayAppend("addresses", keypair, true).execute((error, result) => {
                 if(error) {
