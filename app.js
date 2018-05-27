@@ -14,7 +14,11 @@ app.use(BodyParser.urlencoded({ extended: true }));
  
 var mnemonic = new Mnemonic(Config.mnemonic);
 var master = new Bitcore.HDPrivateKey(mnemonic.toHDPrivateKey());
- 
+
+var cluster = new Couchbase.Cluster("couchbase://" + Config.host);
+ cluster.authenticate(Config.username, Config.password);
+ var bucket = cluster.openBucket(Config.bucket);
+
 module.exports.helper = new Helper(Config.host, Config.bucket, Config.username, Config.password, master);
  
 require("./routes/account.js")(app);
