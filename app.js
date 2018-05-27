@@ -1,6 +1,7 @@
 // Inititalization, Loading config info , and linking up routes .
 // Module.exports.helper variable is our singleton used everywhere.
 const Express = require("express");
+const Couchbase = require("couchbase");;
 const BodyParser = require("body-parser");
 const Bitcore = require("bitcore-lib");
 const Mnemonic = require("bitcore-mnemonic");
@@ -25,6 +26,6 @@ require("./routes/account.js")(app);
 require("./routes/transaction.js")(app);
 require("./routes/utility.js")(app);
  
-var server = app.listen(3333, () => {
+var server = app.listen(8091, () => {
     console.log("Listening at :" + server.address().port + "...");
 });
